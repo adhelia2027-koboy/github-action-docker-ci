@@ -500,6 +500,90 @@ git push
 
 ---
 
+## Project Evidence / Screenshots
+
+This section contains screenshots that document the project implementation process from local setup, Docker build, container testing, Git workflow, and GitHub Actions CI result.
+
+### 1. Project Folder Created
+
+This screenshot shows the initial project folder structure.
+
+![Project Folder Created](screenshots/01-project-folder-created.png)
+
+---
+
+### 2. Static Website File Created
+
+This screenshot shows the `index.html` file inside the `app/` directory.
+
+![App Index Created](screenshots/02-app-index-created.png)
+
+---
+
+### 3. Dockerfile Created
+
+This screenshot shows the Dockerfile used to build the Nginx-based Docker image.
+
+![Dockerfile Created](screenshots/03-dockerfile-created.png)
+
+---
+
+### 4. Docker Ignore File Created
+
+This screenshot shows the `.dockerignore` file used to exclude unnecessary files from the Docker build context.
+
+![Docker Ignore Created](screenshots/04-dockerignore-created.png)
+
+---
+
+### 5. Local Docker Build Success
+
+This screenshot shows the Docker image successfully built on the local machine.
+
+![Local Docker Build Success](screenshots/05-local-docker-build-success.png)
+
+---
+
+### 6. Local Container Smoke Test
+
+This screenshot shows the container running locally and being tested using HTTP request.
+
+![Local Container Smoke Test](screenshots/06-local-container-smoke-test.png)
+
+---
+
+### 7. GitHub Actions Workflow Created
+
+This screenshot shows the GitHub Actions workflow file used for Docker CI automation.
+
+![GitHub Actions Workflow Created](screenshots/07-github-actions-workflow-created.png)
+
+---
+
+### 8. Git Commit on Main Branch
+
+This screenshot shows the project files committed into the `main` branch.
+
+![Git Commit Main Branch](screenshots/08-git-commit-main-branch.png)
+
+---
+
+### 9. Git Push to GitHub
+
+This screenshot shows the local repository successfully pushed to GitHub.
+
+![Git Push to GitHub](screenshots/09-git-push-to-github.png)
+
+---
+
+### 10. GitHub Actions Success
+
+This screenshot shows the GitHub Actions workflow completed successfully.
+
+![GitHub Actions Success](screenshots/10-github-actions-success.png)
+
+---
+
 ## Portfolio Value
 
 This project demonstrates several important Cloud Engineer and DevOps skills:
