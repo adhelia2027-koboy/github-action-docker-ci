@@ -1,0 +1,33 @@
+> name: Docker CI
+> 
+> on: 
+>   push:
+>     branches: [ "main" ]
+>   pull_request:
+>     branches: [ "main" ]
+> 
+> jobs:
+>   docker-build-and-test:
+>     runs-on: ubuntu-latest
+>     
+>     steps:
+>       - name: Checkout repository
+>         uses: actions/checkout@v4
+>       
+>       - name: Show repository files
+>         run: ls -R
+> 
+>       - name: Build Docker image
+>         run: docker build -t github-action-docker-ci:${{ github.sha }} .
+> 
+>       - name: Run container smoke test
+>         run:  |
+>           docker run -d --name test-web -p 8080:80 github-action-docker-ci:${{ github.sha }}
+>           sleep 5
+>           curl -I http://localhost:8080
+>           curl http://localhost:8080 | grep "Github Actions Docker CI Project"
+>           docker logs test-web --tail 20 
+> 
+>       - name: Cleanup container 
+>         if: always()
+>         run: docker rm -f test-web || true
